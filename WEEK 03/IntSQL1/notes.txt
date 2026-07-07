@@ -1,0 +1,13 @@
+
+-- why do we need a subquery?
+
+
+
+
+-- 
+
+
+
+
+
+
