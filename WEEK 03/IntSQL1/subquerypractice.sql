@@ -31,3 +31,27 @@ where salary <(
 
 
 
+-- Find the names, department names, and salaries of instructors whose salary is greater than the average salary of the 'Comp. Sci.' department.
+
+
+select name, dept_name, salary from instructor 
+where salary > (
+    select avg(salary) from instructor 
+    where dept_name = 'Comp. Sci.'
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
