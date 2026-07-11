@@ -58,12 +58,29 @@ having Avg(salary) > 80000) as Dept_avg
 
 GROUP BY dept_name
 
+---------------------------------------------------------------------------------------
+-- Show the department name and its average salary, but only for departments whose average salary is greater than 80,000. Sort them by average salary in descending order.
+
+-- first i will find out overall avg salary across all ins & dept
+
+select dept_name, avg(dept_avg)
+
+from(
+    select  dept_name,avg(salary) 
+from instructor 
+group by dept_name
+having avg(salary) > 99000
+
+) AS dept_avg
 
 
+select  dept_name,avg(salary) 
+from instructor 
+group by dept_name
+having avg(salary) > 80000
 
 
-
-
+---------------------------------------------------------------------------
 
 
 
